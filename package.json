@@ -1,0 +1,22 @@
+{
+  "name": "shop-for-products",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDPrj/Shop-For-Products.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HDPrj/Shop-For-Products/issues"
+  },
+  "homepage": "https://github.com/HDPrj/Shop-For-Products#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}

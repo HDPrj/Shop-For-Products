@@ -47,7 +47,7 @@
 
 /* section home  */
 
-.btn-cart{
+.btn-cart {
     padding: 0.7rem 1.2rem;
     background: black;
     color: whitesmoke;
@@ -56,10 +56,10 @@
     text-transform: uppercase;
     border-radius: 10px;
     margin-left: 16%;
-  
+
 }
 
-.btn-cart:hover{
+.btn-cart:hover {
     margin-left: 6%;
     background: grey;
     letter-spacing: 2px;
@@ -68,7 +68,7 @@
     color: black;
 }
 
-.home{
+.home {
     width: 100%;
     min-height: 90vh;
     display: grid;
@@ -79,13 +79,14 @@
     border-radius: 5px;
 
 }
-.home-text p{
+
+.home-text p {
     margin-left: 6%;
-    
+
     text-transform: uppercase;
 }
 
-.home-text h1{
+.home-text h1 {
     font-size: 3.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -101,6 +102,7 @@
     0% {
         transform: scale(1, 1);
     }
+
     25% {
         transform: scale(1.2, 0.5);
     }
@@ -108,6 +110,7 @@
     50% {
         transform: scale(1.1, 0.8);
     }
+
     100% {
         transform: scale(1, 1);
     }
@@ -122,6 +125,7 @@
     0% {
         transform: scale(1, 1);
     }
+
     25% {
         transform: scale(1.2, 0.5);
     }
@@ -129,24 +133,52 @@
     50% {
         transform: scale(1.1, 0.8);
     }
+
     100% {
         transform: scale(1, 1);
     }
 }
 
 
-.home-img:hover{
+.home-img:hover {
     animation: rotate 1s linear;
 }
 
-@keyframes rotate{
-    0%{
+@keyframes rotate {
+    0% {
         transform: rotate(0deg);
     }
-    50%{
+
+    50% {
         transform: rotate(180deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
+}
+
+/* section shop */
+
+.shop-text h2 {
+    font-size: 2rem;
+    font-weight: 60;
+    text-align: center;
+}
+
+.product-img{
+    max-width: 70%;
+}
+
+.shop-wrapper p{
+    text-align: center;
+}
+
+.shop-wrapper .row .col-sm-4{
+    text-align: center;
+}
+
+.shop-wrapper .btn-cart{
+    margin: unset;
+    margin-bottom: 5%;
 }

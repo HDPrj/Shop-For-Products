@@ -45,18 +45,108 @@
 
 
 
-/* section 1 */
+/* section home  */
 
-.home-content{
-    min-height: 600px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    gap: 2rem;
-}
-.home-text h1{
+.btn-cart{
+    padding: 0.7rem 1.2rem;
+    background: black;
+    color: whitesmoke;
+    font-weight: 500;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-left: 16%;
   
-    font-size: 3.4rem;
+}
+
+.btn-cart:hover{
+    margin-left: 6%;
+    background: grey;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    text-decoration: none;
+    color: black;
+}
+
+.home{
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    align-items: center;
+    gap: 1.5rem;
+    background: rgb(161, 160, 160);
+    border-radius: 5px;
+
+}
+.home-text p{
+    margin-left: 6%;
+    
+    text-transform: uppercase;
+}
+
+.home-text h1{
+    font-size: 3.5rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    margin-left: 6%;
+}
+
+
+.home-text h1:hover {
+    animation: effect linear 1s;
+}
+
+@keyframes effect {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1.2, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+.home-text p:hover {
+    animation: effect linear 1s;
+}
+
+@keyframes effect {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1.2, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+.home-img:hover{
+    animation: rotate 1s linear;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }

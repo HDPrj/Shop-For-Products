@@ -42,3 +42,29 @@
 .bottom-navbar-wrapper {
     margin: 0 auto;
 }
+
+/* section 1 */
+/* section{
+    padding: 4rem 0 3rem;
+
+}
+.container{
+    max-width: 968px;
+    width: 100%;
+    margin: auto;
+} */
+
+
+.home-content{
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.home-text h1{
+  
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}

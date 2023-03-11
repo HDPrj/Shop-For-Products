@@ -51,9 +51,9 @@
     .bottom-navbar-wrapper{
         margin-top:20px;
     }
-    .search-form-wrapper{
+    .search-form-wrapper, .navbar-icon-wrapper{
         position: relative;
-        z-index: 10000;
+        z-index: 1020;
     }
     .search-btn-element{
         background-color: green!important;

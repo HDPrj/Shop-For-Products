@@ -31,6 +31,7 @@
 .navbar-icon-wrapper li a {
     background-color: #1D1818;
     color: white;
+    border-radius: 30%;
 }
 
 .navbar .navbar-icon-wrapper {
@@ -43,6 +44,21 @@
     margin: 0 auto;
 }
 
+@media only screen and (max-width:992px) {
+    .navbarIcons {
+        display: flex;
+    }
+    .bottom-navbar-wrapper{
+        margin-top:20px;
+    }
+    .search-form-wrapper{
+        position: relative;
+        z-index: 10000;
+    }
+    .search-btn-element{
+        background-color: green!important;
+    }
+}
 
 
 /* section home  */
@@ -166,19 +182,19 @@
     text-align: center;
 }
 
-.product-img{
+.product-img {
     max-width: 70%;
 }
 
-.shop-wrapper p{
+.shop-wrapper p {
     text-align: center;
 }
 
-.shop-wrapper .row .col-sm-4{
+.shop-wrapper .row .col-sm-4 {
     text-align: center;
 }
 
-.shop-wrapper .btn-cart{
+.shop-wrapper .btn-cart {
     margin: unset;
     margin-bottom: 5%;
 }

@@ -1,7 +1,16 @@
 const express = require("express")
 const path = require("path")
-
 const app = express()
+
+app.use(
+  "/css",
+  express.static(path.join(__dirname, "node_modules/boxicons/css"))
+)
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "node_modules/boxicons/dist"))
+)
+
 
 app.use(
   "/css",
@@ -9,9 +18,9 @@ app.use(
 )
 
 app.use(
-    "/css",
-    express.static(path.join(__dirname, "public/src/css"))
-  )
+  "/css",
+  express.static(path.join(__dirname, "public/src/css"))
+)
 app.use(
   "/js",
   express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))

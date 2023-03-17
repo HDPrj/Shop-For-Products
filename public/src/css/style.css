@@ -1,25 +1,33 @@
 .bg-drk {
     background-color: #1D1818;
-    border-radius: 10px;
     height: 80px;
     margin-top: 1%;
 }
 
+.navbar {
+    position: relative;
+}
+
 .navbar-brand {
     font-size: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;
+    display: block;
 }
 
 .bg-gry {
     background-color: #D9D9D9;
     height: 20px;
-    border-radius: 20px;
 }
 
-.search-form-wrapper {
-    margin-left: auto;
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        flex-basis: 100% !important;
+    }
 }
 
-.search-form-wrapper .search-btn-element{
+.search-form-wrapper .search-btn-element {
     background-color: gray;
     font-size: 20px;
 }
@@ -48,15 +56,19 @@
     .navbarIcons {
         display: flex;
     }
-    .bottom-navbar-wrapper{
-        margin-top:20px;
+
+    .bottom-navbar-wrapper {
+        margin-top: 20px;
     }
-    .search-form-wrapper, .navbar-icon-wrapper{
+
+    .search-form-wrapper,
+    .navbar-icon-wrapper {
         position: relative;
         z-index: 1020;
     }
-    .search-btn-element{
-        background-color: green!important;
+
+    .search-btn-element {
+        background-color: green !important;
     }
 }
 

@@ -19,8 +19,8 @@
     margin-left: auto;
 }
 
-.search-form-wrapper button i {
-    color: white;
+.search-form-wrapper .search-btn-element{
+    background-color: gray;
     font-size: 20px;
 }
 

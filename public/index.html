@@ -19,6 +19,7 @@
     <!-- bootstrap ccs -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- JS link -->
+    <script src="./js/axios.min.js"></script>
     <script src="./js/script.js"></script>
 
     <!-- Bootstrap JS links-->
@@ -47,13 +48,14 @@
                 </form>
             </div>
             <a class="navbar-brand" href="#">ECom Shop</a>
-            
+
             <div class="collapse navbar-collapse navbarIcons" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto navbar-icon-wrapper">
                     <li><a href="#"><box-icon name='user-circle' color="white" size="cssSize" data-target="#model-login"
                                 data-toggle="modal"></box-icon></a>
                     </li>
-                    <li><a href="#"><box-icon name ='cart' color="white" size="cssSize" data-target="#model-cart" data-toggle="modal"></box-icon></a></li>
+                    <li><a href="#"><box-icon name='cart' color="white" size="cssSize" data-target="#model-cart"
+                                data-toggle="modal"></box-icon></a></li>
                 </ul>
             </div>
     </header>
@@ -84,11 +86,13 @@
             <h3>Biggest headphones Sale
                 <br> <span>Up To 50% Off</span>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque culpa, totam sed maxime animi facilis!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque culpa, totam sed maxime animi facilis!
+            </p>
             <button id="shopnow">Shop Now</button>
         </div>
         <div class="img">
-            <img src="https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg" alt="">
+            <img src="https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg"
+                alt="">
             <!-- https://cdn.pixabay.com/photo/2013/07/13/12/17/headphone-159569__340.png -->
         </div>
     </section>
@@ -207,10 +211,14 @@
                     <ul class="footer-social-icon">
                         <!-- <li class="my-2"><span>follow us</span></li> -->
                         <div class="fa-4x">
-                            <a href="#"><box-icon type='logo' name='facebook-circle' style="font-size: 30px;color: black"> </box-icon></a>
-                            <a href="#"><box-icon type='logo' name='youtube' style="font-size: 30px;color: black"></box-icon></a>
-                            <a href="#"><box-icon type='logo' name='instagram' style="font-size: 30px;color: black"></box-icon></a>
-                            <a href="#"><box-icon type='logo' name='twitter'style="font-size: 30px;color: black"></box-icon></a>
+                            <a href="#"><box-icon type='logo' name='facebook-circle'
+                                    style="font-size: 30px;color: black"> </box-icon></a>
+                            <a href="#"><box-icon type='logo' name='youtube'
+                                    style="font-size: 30px;color: black"></box-icon></a>
+                            <a href="#"><box-icon type='logo' name='instagram'
+                                    style="font-size: 30px;color: black"></box-icon></a>
+                            <a href="#"><box-icon type='logo' name='twitter'
+                                    style="font-size: 30px;color: black"></box-icon></a>
 
                         </div>
 
@@ -254,7 +262,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <form action="">
+                    <form onsubmit="signup(event)">
                         <div class="form-group">
                             <label for=""> <i class='bx bxs-user'></i> Username:</label>
                             <input type="text" class="form-control">
@@ -267,13 +275,14 @@
                             <a href="" class="text-danger "> forgot password ?</a>
 
                         </div>
-
+                        <button type="submit" class="btn btn-success">Login</button>
                     </form>
                 </div>
 
                 <div class="modal-footer justify-content-center">
-                    <button class="btn btn-dark" data-target="#model-signup" data-toggle="modal" data-dismiss="modal">Sign up</button>
-                    <button class="btn btn-success">Login</button>
+                    <button class="btn btn-dark" data-target="#model-signup" data-toggle="modal"
+                        data-dismiss="modal">Sign up</button>
+                    <button class="btn btn-success">LoginPrev</button>
 
                 </div>
             </div>
@@ -285,11 +294,11 @@
     <div class="modal fade" id="model-cart">
         <div class="modal-dialog ">
             <div class="modal-content">
-                
 
-             
 
-                
+
+
+
             </div>
 
         </div>
@@ -302,7 +311,7 @@
 
 
                 <div class="modal-body">
-                    <form action="">
+                    <form>
                         <div class="form-group">
                             <label for=""> firstname:</label>
                             <input type="text" class="form-control">
@@ -312,26 +321,26 @@
                         <div class="form-group">
                             <label for="">surname</label>
                             <input type="text" class="form-control">
-                      
+
 
                         </div>
 
                         <div class="form-group">
                             <label for="">Email</label>
                             <input type="email" class="form-control">
-                      
+
 
                         </div>
                     </form>
                 </div>
 
 
-                
-                
 
-             
 
-                
+
+
+
+
             </div>
 
         </div>

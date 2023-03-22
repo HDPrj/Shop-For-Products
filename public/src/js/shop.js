@@ -25,9 +25,9 @@ const firstRowDiv = document.createElement('div');
 firstRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(firstRowDiv);
 
-const product1Div = createProductDiv('headphones_product1', 'Headphones1 price', link);
-const product2Div = createProductDiv('headphones_product2', 'Headphones2', link);
-const product3Div = createProductDiv('headphones_product3', 'Headphones3', link);
+const product1Div = createProductDiv('headphones_product1', 'Headphones1 price', "https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
+const product2Div = createProductDiv('headphones_product2', 'Headphones2',"https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
+const product3Div = createProductDiv('headphones_product3', 'Headphones3', "https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
 
 
 firstRowDiv.appendChild(product1Div);
@@ -55,16 +55,16 @@ const secondRowDiv = document.createElement('div');
 secondRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(secondRowDiv);
 
-const product4Div = createProductDiv('headphones_product4', 'Headphones4',link);
-const product5Div = createProductDiv('headphones_product5', 'Headphones5',link);
-const product6Div = createProductDiv('headphones_product6', 'Headphones6',link);
+const product4Div = createProductDiv('headphones_product4', 'Headphones4',"https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
+const product5Div = createProductDiv('headphones_product5', 'Headphones5',"https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
+const product6Div = createProductDiv('headphones_product6', 'Headphones6',"https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
 
 secondRowDiv.appendChild(product4Div);
 secondRowDiv.appendChild(product5Div);
 secondRowDiv.appendChild(product6Div);
 
 // Function to create a product div
-function createProductDiv(imgAltText, productTitle, productImgLink) {
+function createProductDiv(imgAltText, productTitle, productImgLink, productPrice) {
   const productDiv = document.createElement('div');
   productDiv.classList.add('col-sm-4');
 

@@ -25,9 +25,9 @@ const firstRowDiv = document.createElement('div');
 firstRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(firstRowDiv);
 
-const product1Div = createProductDiv('headphones_product1', 'Headphones1 price');
-const product2Div = createProductDiv('headphones_product2', 'Headphones2');
-const product3Div = createProductDiv('headphones_product3', 'Headphones3');
+const product1Div = createProductDiv('headphones_product1', 'Headphones1 price', link);
+const product2Div = createProductDiv('headphones_product2', 'Headphones2', link);
+const product3Div = createProductDiv('headphones_product3', 'Headphones3', link);
 
 
 firstRowDiv.appendChild(product1Div);
@@ -55,26 +55,26 @@ const secondRowDiv = document.createElement('div');
 secondRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(secondRowDiv);
 
-const product4Div = createProductDiv('headphones_product4', 'Headphones4');
-const product5Div = createProductDiv('headphones_product5', 'Headphones5');
-const product6Div = createProductDiv('headphones_product6', 'Headphones6');
+const product4Div = createProductDiv('headphones_product4', 'Headphones4',link);
+const product5Div = createProductDiv('headphones_product5', 'Headphones5',link);
+const product6Div = createProductDiv('headphones_product6', 'Headphones6',link);
 
 secondRowDiv.appendChild(product4Div);
 secondRowDiv.appendChild(product5Div);
 secondRowDiv.appendChild(product6Div);
 
 // Function to create a product div
-function createProductDiv(imgAltText, productTitle) {
+function createProductDiv(imgAltText, productTitle, productImgLink) {
   const productDiv = document.createElement('div');
   productDiv.classList.add('col-sm-4');
 
   const productImg = document.createElement('img');
-  productImg.setAttribute('src', 'https://cdn.pixabay.com/photo/2020/12/03/10/33/headphones-5800159_960_720.jpg');
+  productImg.setAttribute('src', productImgLink);
   productImg.setAttribute('alt', imgAltText);
   productImg.classList.add('product-img');
   productDiv.appendChild(productImg);
 
-  const productTitleP = document.createElement('spam');
+  const productTitleP = document.createElement('span');
   productTitleP.textContent = '1500';
   productTitleP.classList.add("btn" ,"btn-outline-dark",'btn-cart');
   productDiv.appendChild(productTitleP);

@@ -25,7 +25,7 @@ const firstRowDiv = document.createElement('div');
 firstRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(firstRowDiv);
 
-const product1Div = createProductDiv('headphones_product1', 'Headphones1 price', "https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
+const product1Div = createProductDiv('headphones_product1', 'Headphones1', "https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
 const product2Div = createProductDiv('headphones_product2', 'Headphones2',"https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
 const product3Div = createProductDiv('headphones_product3', 'Headphones3', "https://images.fonearena.com/blog/wp-content/uploads/2022/11/Noise-Two-Wireless-Headphones.jpg");
 
@@ -74,16 +74,20 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productPrice
   productImg.classList.add('product-img');
   productDiv.appendChild(productImg);
 
-  const productTitleP = document.createElement('span');
-  productTitleP.textContent = '1500';
-  productTitleP.classList.add("btn" ,"btn-outline-dark",'btn-cart');
-  productDiv.appendChild(productTitleP);
+  // const productTitleP = document.createElement('span');
+  // productTitleP.textContent = '1500';
+  // productTitleP.classList.add("btn" ,"btn-outline-dark",'btn-cart');
+  // productDiv.appendChild(productTitleP);
 
   const addToCartBtn = document.createElement('a');
   addToCartBtn.setAttribute('href', '#');
   addToCartBtn.classList.add('btn', 'btn-secondary', 'btn-cart');
-  addToCartBtn.textContent = 'Add to cart' ;
+  const addToCartBt2 = document.createElement('box-icon');
+  addToCartBt2.setAttribute('name','cart');
+ 
   productDiv.appendChild(addToCartBtn);
+  productDiv.appendChild(addToCartBt2);
+
 
 
 

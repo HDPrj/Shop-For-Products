@@ -51,8 +51,10 @@ secondRowDiv.appendChild(product6Div);
 // Function to create a product div
 function createProductDiv(imgAltText, productTitle, productImgLink, productprice) {
   const productDiv = document.createElement('div');
-  productDiv.classList.add('col-sm-4');
-
+  productDiv.classList.add('d-flex');
+  productDiv.classList.add('flex-sm-column');
+  productDiv.classList.add('align-items-center');
+  
   const productImg = document.createElement('img');
   productImg.setAttribute('src', productImgLink);
   productImg.setAttribute('alt', imgAltText);

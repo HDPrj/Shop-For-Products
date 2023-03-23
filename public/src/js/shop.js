@@ -34,29 +34,14 @@ firstRowDiv.appendChild(product1Div);
 firstRowDiv.appendChild(product2Div);
 firstRowDiv.appendChild(product3Div);
 
-// price tag addition
-
-
-// const newNode = document.createElement("span");
-// const parentDiv = document.getElementById("price").parentNode;
-// let sp2 = document.getElementById("price");
-// parentDiv.insertBefore(newNode, sp2);
-
-
-
-//  let sp1 = document.createElement("span");
-//  let sp2 = document.getElementById("price");
-//  let ProductDiv = sp2.product1Div;
-//  ProductDiv.insertBefore(sp1, sp2);
-
 
 // Create the second row of products
 const secondRowDiv = document.createElement('div');
 secondRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(secondRowDiv);
 
-const product4Div = createProductDiv('headphones_product4', 'Headphones4',"https://media.istockphoto.com/id/860853774/photo/blue-headphones-isolated-on-a-white-background.jpg?b=1&s=170667a&w=0&k=20&c=gGPzyBznbjrCMb1tXjUi6js6Dh-vCp4XIgAaSERnIhs=");
-const product5Div = createProductDiv('headphones_product5', 'Headphones5',"https://cdn.pixabay.com/photo/2019/06/22/04/38/headphones-4290812__340.jpg");
+const product4Div = createProductDiv('headphones_product4' ,'Headphones4',"https://media.istockphoto.com/id/860853774/photo/blue-headphones-isolated-on-a-white-background.jpg?b=1&s=170667a&w=0&k=20&c=gGPzyBznbjrCMb1tXjUi6js6Dh-vCp4XIgAaSERnIhs=");
+const product5Div = createProductDiv('headphones_product5', 'Headphones5',"https://cdn.pixabay.com/photo/2019/06/22/04/38/headphones-4290812__340.jpg",'777');
 const product6Div = createProductDiv('headphones_product6', 'Headphones6',"https://media.istockphoto.com/id/1182209797/photo/close-view-of-wireless-black-gaming-headphones-with-microphone-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=YkT5jyY-NFh1Zhkhzvps_h226pLoPLie1CgpDw27SJA=");
 
 secondRowDiv.appendChild(product4Div);
@@ -64,30 +49,41 @@ secondRowDiv.appendChild(product5Div);
 secondRowDiv.appendChild(product6Div);
 
 // Function to create a product div
-function createProductDiv(imgAltText, productTitle, productImgLink, productPrice) {
+function createProductDiv(imgAltText, productTitle, productImgLink, productprice) {
   const productDiv = document.createElement('div');
   productDiv.classList.add('col-sm-4');
 
   const productImg = document.createElement('img');
   productImg.setAttribute('src', productImgLink);
   productImg.setAttribute('alt', imgAltText);
-  productImg.classList.add('product-img');
-  productDiv.appendChild(productImg);
 
+  productImg.classList.add('product-img');
+  productDiv.append(productImg);
+  
+  //product title
   // const productTitleP = document.createElement('span');
   // productTitleP.textContent = '1500';
   // productTitleP.classList.add("btn" ,"btn-outline-dark",'btn-cart');
   // productDiv.appendChild(productTitleP);
 
+
+  //price tag
+  const price = document.createElement('span');
+  price.setAttribute('href', productprice)
+  const strong = document.createElement('strong');
+  strong.innerText = "700"
+  price.append(strong);
+  // productprice.classList.add('pricerate');
+  productDiv.appendChild(price);
+
+
   const addToCartBtn = document.createElement('a');
   addToCartBtn.setAttribute('href', '#');
   addToCartBtn.classList.add('btn', 'btn-secondary', 'btn-cart');
-  // const addToCartBt2 = document.createElement('box-icon');
-  // addToCartBt2.setAttribute('name','cart');
  addToCartBtn.innerHTML=`<box-icon name='cart' color="white" size="cssSize" data-target="#model-cart"
  data-toggle="modal" id="cart-icon"></box-icon>`
   productDiv.appendChild(addToCartBtn);
-  // productDiv.appendChild(addToCartBt2);
+  
 
 
 

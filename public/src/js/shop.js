@@ -25,9 +25,9 @@ const firstRowDiv = document.createElement('div');
 firstRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(firstRowDiv);
 
-const product1Div = createProductDiv('headphones_product1', 'Headphones1', "https://media.istockphoto.com/id/1325906677/photo/modern-design-of-black-color-wireless-earphone-isolated.jpg?b=1&s=170667a&w=0&k=20&c=NqkzH2XxDe81TB2WzNIHDIMr_r7NCeD8y-kDRmgCg0M=");
-const product2Div = createProductDiv('headphones_product2', 'Headphones2',"https://cdn.pixabay.com/photo/2016/10/06/22/29/headphones-1720164__340.jpg");
-const product3Div = createProductDiv('headphones_product3', 'Headphones3', "https://media.istockphoto.com/id/1246138278/photo/silver-metallic-white-wireless-headphones-in-the-air-isolated-on-white-background-music.jpg?b=1&s=170667a&w=0&k=20&c=3tiFSD3oRoQXUoOVA6S2EommW5JUDciyUXBqjfSPyLQ=");
+const product1Div = createProductDiv('headphones_product1', 'Headphones1', "https://media.istockphoto.com/id/1325906677/photo/modern-design-of-black-color-wireless-earphone-isolated.jpg?b=1&s=170667a&w=0&k=20&c=NqkzH2XxDe81TB2WzNIHDIMr_r7NCeD8y-kDRmgCg0M=",700);
+const product2Div = createProductDiv('headphones_product2', 'Headphones2',"https://cdn.pixabay.com/photo/2016/10/06/22/29/headphones-1720164__340.jpg",702);
+const product3Div = createProductDiv('headphones_product3', 'Headphones3', "https://media.istockphoto.com/id/1246138278/photo/silver-metallic-white-wireless-headphones-in-the-air-isolated-on-white-background-music.jpg?b=1&s=170667a&w=0&k=20&c=3tiFSD3oRoQXUoOVA6S2EommW5JUDciyUXBqjfSPyLQ=",700);
 
 
 firstRowDiv.appendChild(product1Div);
@@ -40,9 +40,9 @@ const secondRowDiv = document.createElement('div');
 secondRowDiv.classList.add('row');
 shopWrapperDiv.appendChild(secondRowDiv);
 
-const product4Div = createProductDiv('headphones_product4' ,'Headphones4',"https://media.istockphoto.com/id/860853774/photo/blue-headphones-isolated-on-a-white-background.jpg?b=1&s=170667a&w=0&k=20&c=gGPzyBznbjrCMb1tXjUi6js6Dh-vCp4XIgAaSERnIhs=");
-const product5Div = createProductDiv('headphones_product5', 'Headphones5',"https://cdn.pixabay.com/photo/2019/06/22/04/38/headphones-4290812__340.jpg",'777');
-const product6Div = createProductDiv('headphones_product6', 'Headphones6',"https://media.istockphoto.com/id/1182209797/photo/close-view-of-wireless-black-gaming-headphones-with-microphone-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=YkT5jyY-NFh1Zhkhzvps_h226pLoPLie1CgpDw27SJA=");
+const product4Div = createProductDiv('headphones_product4' ,'Headphones4',"https://media.istockphoto.com/id/860853774/photo/blue-headphones-isolated-on-a-white-background.jpg?b=1&s=170667a&w=0&k=20&c=gGPzyBznbjrCMb1tXjUi6js6Dh-vCp4XIgAaSERnIhs=",700);
+const product5Div = createProductDiv('headphones_product5', 'Headphones5',"https://cdn.pixabay.com/photo/2019/06/22/04/38/headphones-4290812__340.jpg",701);
+const product6Div = createProductDiv('headphones_product6', 'Headphones6',"https://media.istockphoto.com/id/1182209797/photo/close-view-of-wireless-black-gaming-headphones-with-microphone-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=YkT5jyY-NFh1Zhkhzvps_h226pLoPLie1CgpDw27SJA=",700);
 
 secondRowDiv.appendChild(product4Div);
 secondRowDiv.appendChild(product5Div);
@@ -71,7 +71,7 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
   const price = document.createElement('span');
   price.setAttribute('href', productprice)
   const strong = document.createElement('strong');
-  strong.innerText = "700"
+  strong.innerText = productprice;
   price.append(strong);
   // productprice.classList.add('pricerate');
   productDiv.appendChild(price);

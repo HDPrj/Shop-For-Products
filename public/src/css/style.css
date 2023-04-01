@@ -40,14 +40,16 @@
 
 .navbar-icon-wrapper li {
     padding: 7.5px;
-    text-align: center;
 }
 
 .navbar-icon-wrapper li a {
     background-color: #1D1818;
     color: white;
     border-radius: 30%;
-    text-align: center;
+}
+
+.navbar-icon-wrapper li .carticn{
+    padding-top: 12.5px;
 }
 
 .navbar .navbar-icon-wrapper {

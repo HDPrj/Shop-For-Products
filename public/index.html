@@ -52,8 +52,16 @@
 
             <div class="collapse navbar-collapse navbarIcons" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto navbar-icon-wrapper">
-                    <li><a href="#"><box-icon name='user-circle' color="white" size="cssSize" data-target="#model-login"
-                                data-toggle="modal"></box-icon></a>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"><box-icon name='user-circle' color="white" size="cssSize"
+                                data-target="#model-login" data-toggle="modal"></box-icon></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Log Out</a>
+                        </div>
                     </li>
                     <li><a href="#"><box-icon name='cart' color="white" size="cssSize" data-target="#model-cart"
                                 data-toggle="modal" id="cart-icon"></box-icon></a></li>
@@ -69,7 +77,7 @@
                     <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Shop</a>
+                    <a class="nav-link">Shop</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
@@ -83,14 +91,14 @@
 
     <!-- HOME section -->
 
-   <script src="./js/home.js"></script>
+    <script src="./js/home.js"></script>
 
     <!-- SHOP section -->
-  
+
     <script src="./js/shop.js"></script>
 
     <!-- footer section -->
-   
+
     <script src="./js/footer.js"></script>
 
     <!-- modal login -->
@@ -133,33 +141,34 @@
     </div>
 
     <!-- cart modal -->
-    <div class="modal fade" id="model-cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="model-cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: ₹<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
             </div>
-            <div class="modal-body">
-              <table class="show-cart table">
-                
-              </table>
-              <div>Total price: ₹<span class="total-cart"></span></div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Order now</button>
-            </div>
-          </div>
         </div>
-      </div> 
-      <!-- <script src="./src/js/cart.js"></script> -->
-      
+    </div>
+    <!-- <script src="./src/js/cart.js"></script> -->
+
 
     <!-- sign up -->
-    <div class="modal fade" id="model-signup">
+    <!-- <div class="modal fade" id="model-signup">
         <div class="modal-dialog ">
             <div class="modal-content">
 
@@ -179,12 +188,12 @@
 
                         </div>
 
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="">Email</label>
                             <input type="email" class="form-control">
 
 
-                        </div> -->
+                        </div>
 
                         <button type="submit" class="btn btn-success">Signup</button>
                     </form>
@@ -200,7 +209,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
 

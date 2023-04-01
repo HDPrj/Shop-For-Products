@@ -16,8 +16,8 @@
     display: block;
 }
 
-.search-form-wrapper label{
-    color:rgb(38, 73, 63);
+.search-form-wrapper label {
+    color: rgb(38, 73, 63);
     padding-right: 10px;
     font-weight: 1000;
 }
@@ -40,18 +40,28 @@
 
 .navbar-icon-wrapper li {
     padding: 7.5px;
+    text-align: center;
 }
 
 .navbar-icon-wrapper li a {
     background-color: #1D1818;
     color: white;
     border-radius: 30%;
+    text-align: center;
 }
 
 .navbar .navbar-icon-wrapper {
     font-size: 25px;
     margin-left: auto;
     margin-right: initial !important;
+}
+
+.no-dropdown::after {
+    display: none;
+}
+
+.no-dropdown+.dropdown-menu {
+    display: none;
 }
 
 .bottom-navbar-wrapper {
@@ -97,15 +107,16 @@
     100% {
         transform: rotate(360deg);
     }
-} */ 
+} */
 
 
-.home-section{
+.home-section {
     width: 100%;
     height: 93vh;
     background-color: #a9a9a926;
 }
-.home{
+
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,32 +125,39 @@
     z-index: 0;
     font-family: 'Roboto Slab', serif;
 }
-.home .img{
+
+.home .img {
     flex: 1 1 400px;
 }
-.home .img img{
+
+.home .img img {
     width: 90%;
-    
+
 }
-.home .content{
+
+.home .content {
     flex: 1 1 400px;
     margin-top: 30px;
 }
-.content h3{
+
+.content h3 {
     margin-left: 70px;
     font-size: 50px;
     text-shadow: 1px 1px 1px black;
     color: black;
     font-weight: bold;
 }
-.content h3 span{
+
+.content h3 span {
     font-size: 40px;
 }
-.content p{
+
+.content p {
     margin-left: 70px;
     color: black;
 }
-.content #shopnow{
+
+.content #shopnow {
     margin-left: 70px;
     width: 200px;
     height: 38px;
@@ -149,40 +167,49 @@
     cursor: pointer;
     border-radius: 40px;
 }
-.content #shopnow:hover{
+
+.content #shopnow:hover {
     background-color: black;
     color: white;
 }
-@media screen and (max-width:800px){
-    .content h3{
+
+@media screen and (max-width:800px) {
+    .content h3 {
         margin-left: 50px;
         font-size: 40px;
     }
-    .content p{
+
+    .content p {
         margin-left: 50px;
     }
-    .content #shopnow{
+
+    .content #shopnow {
         margin-left: 50px;
     }
 }
-@media screen and (max-width:570px){
-    .content h3{
+
+@media screen and (max-width:570px) {
+    .content h3 {
         margin-left: 20px;
     }
-    .content p{
+
+    .content p {
         margin-left: 20px;
     }
-    .content #shopnow{
+
+    .content #shopnow {
         margin-left: 20px;
     }
 }
-@media screen and (max-width:799px){
-    .home-section{
+
+@media screen and (max-width:799px) {
+    .home-section {
         height: 150vh;
     }
 }
-@media screen and (max-width:550px){
-    .home-section{
+
+@media screen and (max-width:550px) {
+    .home-section {
         height: 100vh;
     }
 }

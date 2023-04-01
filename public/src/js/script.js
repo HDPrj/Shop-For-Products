@@ -32,9 +32,13 @@ const login = event => {
 
         if (foundUser) {
           alert('Login successful!');
+          sessionStorage.setItem('user', JSON.stringify(foundUser));
           let modal = document.getElementById("model-login")
           $(modal).modal('hide');
           dropdownToggle.classList.remove('no-dropdown');
+          let profileItem = document.querySelector('.dropdown-item.profile');
+          const profileName = foundUser.username;
+          profileItem.textContent = profileName;
         } else {
           alert('Incorrect username or password');
         }
@@ -47,6 +51,15 @@ const login = event => {
     });
 };
 
+// Code to use with cart
+// if (sessionStorage.getItem('user')) {
+// } else {
+// }
+
+document.querySelector('.dropdown-item.logout').addEventListener('click', function() {
+  sessionStorage.removeItem('user');
+  location.reload();
+});
 
 // const signup = event => {
 //     event.preventDefault();

@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- JS link -->
     <script src="./js/axios.min.js"></script>
-    <script src="./js/script.js"></script>
     <script src="./js/cart.js"></script>
 
     <!-- Bootstrap JS links-->
@@ -52,15 +51,24 @@
 
             <div class="collapse navbar-collapse navbarIcons" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto navbar-icon-wrapper">
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"><box-icon name='user-circle' color="white" size="cssSize"
-                                data-target="#model-login" data-toggle="modal"></box-icon></a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="#">Settings</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Log Out</a>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <!-- <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <box-icon name='user-circle' color="white" size="cssSize" data-target="#model-login"
+                                data-toggle="modal">
+                            </box-icon>
+                        </a> -->
+                            <button type="button" class="btn userbtn"><box-icon name='user-circle' color="white" size="cssSize"
+                                    data-target="#model-login" data-toggle="modal" class="usericn"></box-icon></button>
+                            <button href="#" type="button" class="btn userbtn dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-expanded="false"></button>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item profile" href="#">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
                         </div>
                     </li>
                     <li><a href="#"><box-icon name='cart' color="white" size="cssSize" data-target="#model-cart"
@@ -164,7 +172,7 @@
             </div>
         </div>
     </div>
-      <!-- <script src="./src/js/cart.js"></script> -->
+    <!-- <script src="./src/js/cart.js"></script> -->
 
 
     <!-- sign up -->
@@ -212,7 +220,7 @@
     </div> -->
 
 
-
+    <script src="./js/script.js"></script>
 
 </body>
 

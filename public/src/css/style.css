@@ -200,7 +200,7 @@
 }
 
 .product-img {
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .shop-wrapper p {
@@ -216,3 +216,12 @@
     margin-bottom: 5%;
 }
 
+/* .shop-wrapper .row{
+    flex-wrap:unset!important
+} */
+
+/* @media screen and (max-width:768px){
+    .shop-wrapper .row{
+        margin-left: 20px;
+    }
+} */

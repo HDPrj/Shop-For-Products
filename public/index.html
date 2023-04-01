@@ -37,15 +37,19 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="form-inline my-2 my-lg-0 search-form-wrapper">
-                    <label>Search Here</label>
-                    <input class="form-control mr-sm-2 search-element collapse" id="searchCollapse" type="search"
+            <div class="collapse navbar-collapse search-container" id="navbarSupportedContent">
+                <div class="search-container">
+                    <form class="form-inline my-2 my-lg-0 search-form-wrapper">
+                      <label>Search Here</label>
+                      <input class="form-control mr-sm-2 search-element collapse" id="searchCollapse" type="search"
                         placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0 search-btn-element" type="button"
-                        data-toggle="collapse" data-target="#searchCollapse" aria-pressed="false"><box-icon
-                            name='search'></box-icon></button>
-                </form>
+                      <button class="btn btn-outline-success my-2 my-sm-0 search-btn-element" type="button"
+                        data-toggle="collapse" data-target="#searchCollapse" aria-pressed="false" onclick="showSearchRslts()"><box-icon
+                          name='search'></box-icon></button>
+                    </form>
+                  
+                    <div id="searchResults" class="search-results-wrapper"></div>
+                  </div>                  
             </div>
             <a class="navbar-brand" href="#">ECom Shop</a>
 
@@ -59,15 +63,16 @@
                                 data-toggle="modal">
                             </box-icon>
                         </a> -->
-                            <button type="button" class="btn userbtn"><box-icon name='user-circle' color="white" size="cssSize"
-                                    data-target="#model-login" data-toggle="modal" class="usericn"></box-icon></button>
+                            <button type="button" class="btn userbtn"><box-icon name='user-circle' color="white"
+                                    size="cssSize" data-target="#model-login" data-toggle="modal"
+                                    class="usericn"></box-icon></button>
                             <button href="#" type="button" class="btn userbtn dropdown-toggle dropdown-toggle-split"
                                 data-toggle="dropdown" aria-expanded="false"></button>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item profile" href="#">Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log Out</a>
+                                <a class="dropdown-item logout" href="#" onclick="logout()">Log Out</a>
                             </div>
                         </div>
                     </li>
@@ -221,6 +226,7 @@
 
 
     <script src="./js/script.js"></script>
+    <script src="./js/search.js"></script>
 
 </body>
 

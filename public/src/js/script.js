@@ -55,11 +55,12 @@ const login = event => {
 // if (sessionStorage.getItem('user')) {
 // } else {
 // }
-
+const logout = () => {
 document.querySelector('.dropdown-item.logout').addEventListener('click', function() {
   sessionStorage.removeItem('user');
   location.reload();
 });
+};
 
 // const signup = event => {
 //     event.preventDefault();

@@ -12,7 +12,7 @@ const searchProducts = async (searchTerm) => {
             return product.name.toLowerCase().includes(searchTerm.toLowerCase());
         });
         console.log(filteredProducts);
-        const productHTML = filteredProducts.map(product => {
+        const productHTML = filteredProducts.slice(0,4).map(product => {
             return `
       <div class="product">
       <div class="d-flex">

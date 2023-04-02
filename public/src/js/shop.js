@@ -104,7 +104,7 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
       <td><button class="btn btn-danger btn-sm remove-btn">Remove</button></td>
       <td>
         <div class="d-flex justify-content-center align-items-center">
-          <button class="btn btn-danger btn-sm remove-btn mr-2">-</button>
+          <button class="btn btn-danger btn-sm remv-btn mr-2">-</button>
           <span class="mx-2 item-count">1</span>
           <button class="btn btn-success btn-sm add-btn ml-2">+</button>
         </div>
@@ -113,13 +113,13 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
       showCartTable.appendChild(cartRow);
       totalPrice += item.productprice;
 
-      const removeBtn = cartRow.querySelector('.remove-btn');
+      const remvBtn = cartRow.querySelector('.remv-btn');
       const addBtn = cartRow.querySelector('.add-btn');
       const itemCountSpan = cartRow.querySelector('.item-count');
 
       itemCountSpan.innerHTML = 1;
 
-      removeBtn.addEventListener('click', function () {
+      remvBtn.addEventListener('click', function () {
         let itemCount = itemCountSpan.innerHTML;
         if (itemCount > 1) {
           itemCount--;

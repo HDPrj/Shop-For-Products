@@ -170,10 +170,17 @@
 
                     </table>
                     <div>Total price: ₹<span class="total-cart"></span></div>
+
+                    <!-- counter -->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button class="btn btn-danger btn-sm remove-btn mr-2">-</button>
+                        <span class="mx-2">${itemCount}</span>
+                        <button class="btn btn-success btn-sm add-btn ml-2">+</button>
+                      </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Order now</button>
+                    <button type="button" class="btn btn-primary" data-target="#model-payment" data-toggle="modal">Order now</button>
                 </div>
             </div>
         </div>
@@ -224,6 +231,39 @@
 
         </div>
     </div> -->
+
+    <!-- Payment Modal -->
+
+    <div class="modal fade" id="model-payment">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h3 class="text-center text-secondary">ECOM </h3>
+                    <button type="button" class="close" data-dismiss="modal"> &times;</button>
+                </div>
+
+                <div class="modal-body ">
+                    
+                        <div class="form-group">
+                            <label for=""> Name:  <input type="text" class="form-control" id="product-name"></label>
+                           
+
+                        </div>
+
+                        
+                        
+                        <button style="width: 100%;" type="submit" class="btn btn-dark"> <img style="height: 55px;" src="data:image/png;base64,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" alt=""></button>
+                    
+                </div>
+
+                
+                
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
     <script src="./js/script.js"></script>

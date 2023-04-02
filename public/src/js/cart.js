@@ -1,6 +1,9 @@
 
 // const product =
 
+// const { default: axios } = require("axios");
+// const { response } = require("express");
+
 // `[
 //     {
 //         "name": "headphone1",
@@ -72,6 +75,25 @@
 
 
 
+    axios.get('./js/product.json')
+        .then(function (response) {
+
+            // handle success
+            
+            console.log(response.data.product);
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        })
+        .finally(function () {
+            // always executed
+        });
+
+        // product.forEach(element => {
+
+           
+        // });
 
 
 

@@ -133,6 +133,18 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
         itemCountSpan.innerHTML = itemCount;
       });
 
+      //remove from cart
+    const removeBtns = document.querySelectorAll('.remove-btn');
+    removeBtns.forEach((removeBtn) => {
+      removeBtn.addEventListener('click', (event) => {
+        const cartRow = event.target.closest('tr');
+        const index = cartRow.dataset.index;
+        cartItems.splice(index, 1);
+        showCartTable.removeChild(cartRow);
+        totalPrice -= item.productprice;
+        totalCart.innerText = totalPrice;
+      });
+    });
 
     });
 

@@ -16,58 +16,13 @@
 // }
 
 
-
-// let dropdownToggle = document.querySelector('.dropdown-toggle');
-// dropdownToggle.classList.add('no-dropdown');
-
-// const login = event => {
-//   event.preventDefault();
-
-//   const username = document.getElementById('userName').value;
-//   const password = document.getElementById('password').value;
-
-//   axios.get('./js/login.json')
-//     .then(function (response) {
-//       const users = response.data.users;
-//       if (users) {
-//         const foundUser = users.find(user => user.username === username && user.password === password);
-
-//         if (foundUser) {
-//           alert('Login successful!');
-//           sessionStorage.setItem('user', JSON.stringify(foundUser));
-//           let modal = document.getElementById("model-login")
-//           $(modal).modal('hide');
-
-//         dropdownToggle.classList.remove('no-dropdown');
-//           let profileItem = document.querySelector('.dropdown-item.profile');
-//           const profileName = foundUser.username;
-//           profileItem.textContent = profileName;
-//         } else {
-//           alert('Incorrect username or password');
-//         }
-//       } else {
-//         alert('No users found in login data');
-//       }
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-// };
-
-// Code to use with cart
-// if (sessionStorage.getItem('user')) {
-// } else {
-// }
-
-
-
-/// ========login issue  code
+/// ========login 
+let dropdownToggle = document.querySelector('.dropdown-toggle');
+dropdownToggle.classList.add('no-dropdown');
 const login = event => {
   event.preventDefault();
-
   const username = document.getElementById('userName').value;
   const password = document.getElementById('password').value;
-
   axios.get('./js/login.json')
     .then(function (response) {
       const users = response.data.users;
@@ -77,18 +32,19 @@ const login = event => {
         if (foundUser) {
           alert('Login successful!');
           sessionStorage.setItem('user', JSON.stringify(foundUser));
-          let modal = document.getElementById("model-login");
+          let modal = document.getElementById("model-login")
           $(modal).modal('hide');
 
-          // Remove sign-in functionality
+            // Remove sign-in functionality
           let dropdownToggle = document.querySelector('.dropdown-toggle');
           dropdownToggle.classList.add('no-dropdown');
 
           // Remove login modal
           modal.remove();
 
-          let profileItem = document.querySelector('.dropdown-item.profile');
+
           dropdownToggle.classList.remove('no-dropdown');
+          let profileItem = document.querySelector('.dropdown-item.profile');
           const profileName = foundUser.username;
           profileItem.textContent = profileName;
         } else {
@@ -102,6 +58,18 @@ const login = event => {
       console.log(error);
     });
 };
+
+
+// Code to use with cart
+// if (sessionStorage.getItem('user')) {
+// } else {
+// }
+
+document.querySelector('.dropdown-item.logout').addEventListener('click', function() {
+  sessionStorage.removeItem('user');
+  location.reload();
+});
+
 
 
 

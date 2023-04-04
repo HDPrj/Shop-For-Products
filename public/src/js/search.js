@@ -49,12 +49,12 @@ const searchProducts = async (searchTerm) => {
                       </div>
                       <div class="col-md-6">
                         <h2>wireless headphones</h2>
-                        <p>Headphone1 is a wireless device..</p>
+                        <p>${product.name} is a wireless device..</p>
                         <h3>Standout Features</h3>
                         <ul>
-                          <li>fast charging</li>
-                          <li>16 hours playtime</li>
-                          <li>Gaming mode</li>
+                          <li>${product.description1}</li>
+                          <li>${product.description2}</li>
+                          <li>${product.description3}</li>
                         </ul>
                         <p>Price: ${product.price}</p>
                         <a href="" class="btn btn-primary">Buy Now</a>

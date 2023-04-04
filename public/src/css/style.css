@@ -115,7 +115,7 @@
     margin-left: auto;
     margin-right: initial !important;
     margin-right: 50px !important;
-    
+
 }
 
 .no-dropdown::after {
@@ -148,7 +148,7 @@
     .search-btn-element {
         background-color: green !important;
     }
-    
+
 }
 
 
@@ -315,3 +315,26 @@
         margin-left: 20px;
     }
 } */
+
+/* cart badge */
+.cart-badge {
+    position: absolute;
+    right: 45px;
+      bottom: 30px;
+    display: block;
+    width: 27px;
+    height: 27px;
+    font-size: 1rem;
+    font-weight: light;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8rem;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    background: whitesmoke;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(#fff, .3);
+      z-index: 50;
+  }

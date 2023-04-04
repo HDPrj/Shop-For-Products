@@ -51,6 +51,7 @@ firstRowDiv.appendChild(product4Div);
 firstRowDiv.appendChild(product5Div);
 firstRowDiv.appendChild(product6Div);
 let cartItems = [];
+let cartItemCount = 0;
 // Function to create a product div
 function createProductDiv(imgAltText, productTitle, productImgLink, productprice) {
   const productDiv = document.createElement('div');
@@ -88,6 +89,9 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
       count: 0
     };
     cartItems.push(item);
+    const cartBadge = document.getElementById('cartbadge');
+    cartItemCount += 1;
+    cartBadge.textContent = cartItemCount;
 
     // update cart modal
     const showCartTable = document.querySelector('.show-cart');
@@ -96,6 +100,7 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
     let totalPrice = 0;
     cartItems.forEach((item, index) => {
       const cartRow = document.createElement('tr');
+      cartRow.classList.add('button-count');
       cartRow.dataset.index = index;
       cartRow.innerHTML = `
       <td><img src="${item.productImgLink}" alt="${item.imgAltText}" width="50"></td>
@@ -149,8 +154,20 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
           showCartTable.removeChild(cartRow);
           totalPrice -= item.productprice;
           totalCart.innerText = totalPrice;
+
+          const table = document.querySelector(".show-cart.table");
+          const rows = table.querySelectorAll("tr.button-count");
+          let count = 0;
+          rows.forEach(function (row) {
+            const index = row.getAttribute("data-index");
+            count += index;
+          });
+          cartItemCount -= 1;
+          cartBadge.textContent = cartItemCount;
         });
       });
+
+
 
     });
 

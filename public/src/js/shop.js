@@ -124,9 +124,9 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
         if (itemCount > 1) {
           itemCount--;
           itemCountSpan.innerHTML = itemCount;
-// wn2d
-          totalPrice = totalPrice * itemCount;
-          totalCart.innerText = totalPrice;
+          // wn2d
+          totalPrice -= item.productprice;
+          totalCart.textContent = totalPrice;
         }
       });
 
@@ -134,9 +134,9 @@ function createProductDiv(imgAltText, productTitle, productImgLink, productprice
         let itemCount = itemCountSpan.innerHTML;
         itemCount++;
         itemCountSpan.innerHTML = itemCount;
-// wn2d
-        totalPrice = totalPrice * itemCount;
-        totalCart.innerText = totalPrice;
+        // wn2d
+        totalPrice += item.productprice;
+        totalCart.textContent = totalPrice;
       });
 
       //remove from cart

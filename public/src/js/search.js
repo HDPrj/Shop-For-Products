@@ -27,11 +27,11 @@ const searchProducts = async (searchTerm) => {
         <div class="product">
           <div class="d-flex">
             <img src="${product.image}" alt="${product.name}">
-            <button type="button" class="btn btn-primary product-btn ${productClass}" data-toggle="modal" data-target="#${product.id}" data-backdrop="false">${product.name}</button>
+            <button type="button" class="btn btn-sm btn-primary product-btn ${productClass}" onclick="showDescriptionToggle()" data-backdrop="false">${product.name}</button>
           </div>
         </div>
 
-        <div class="modal fade productModal" id="${product.id}">
+        <div class="modal fade productModal" id="myModal">
         <div class="modal-dialog ">
             <div class="modal-content">
                 <div class="modal-header">
@@ -89,13 +89,47 @@ searchButton.addEventListener('click', () => {
 });
 
 let searchRsltToggle = document.querySelector('.search-results-wrapper');
-searchRsltToggle.classList.add('no-search-results-wrapper');
+// searchRsltToggle.classList.add('no-search-results-wrapper');
+// searchRsltToggle.style.display = "none";
 
 const showSearchRslts = () => {
-  if (searchRsltToggle.classList.contains('no-search-results-wrapper')) {
-    searchRsltToggle.classList.remove('no-search-results-wrapper');
+  // const srchRsltWrapper = document.getElementsByClassName('search-results-wrapper');
+  // console.log(srchRsltWrapper);
+  if (searchRsltToggle.classList.contains('search-results-div')) {
+    // searchRsltToggle.classList.remove('no-search-results-wrapper');
+    searchRsltToggle.style.display = "block";
+    searchRsltToggle.classList.remove('search-results-div');
+
   } else {
-    searchRsltToggle.classList.add('no-search-results-wrapper');
+    // searchRsltToggle.classList.add('no-search-results-wrapper');
+    searchRsltToggle.classList.add('search-results-div');
+    searchRsltToggle.style.display = "none";
   }
 };
 
+
+
+// const descriptionButton = document.querySelector('.product-btn');
+// descriptionButton.addEventListener('click', () => {
+
+// });
+
+let descriptionToggle = document.querySelector('.search-results-wrapper');
+const showDescriptionToggle = () => {
+  descriptionToggle.classList.add('search-results-div');
+  if (descriptionToggle.classList.contains('search-results-div')) {
+    descriptionToggle.classList.add('search-results-div');
+    descriptionToggle.style.display = "none";
+    setTimeout(() => {
+      $('#myModal').appendTo("body").modal('show');
+    }, 0);
+
+  } else {
+    descriptionToggle.classList.remove('search-results-div');
+    descriptionToggle.style.display = "block";
+    // setTimeout(() => {
+    //   $('#myModal').modal('hide');
+    // }, 1000);
+
+  }
+}

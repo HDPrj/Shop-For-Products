@@ -48,7 +48,7 @@
                             onclick="showSearchRslts()"><box-icon name='search'></box-icon></button>
                     </form>
 
-                    <div id="searchResults" class="search-results-wrapper"></div>
+                    <div id="searchResults" class="search-results-wrapper search-results-div"></div>
                 </div>
             </div>
             <a class="navbar-brand" href="#">ECom Shop</a>
@@ -78,8 +78,8 @@
                     </li>
                     <li><a href="#"><box-icon name='cart' color="white" size="cssSize" data-target="#model-cart"
                                 data-toggle="modal" id="cart-icon" class="carticn"></box-icon>
-                                <span class='cart-badge' id="cartbadge" value="">0</span>
-                            </a></li>
+                            <span class='cart-badge' id="cartbadge" value="">0</span>
+                        </a></li>
                 </ul>
             </div>
     </header>
@@ -92,7 +92,7 @@
                     <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"  href="">Shop</a>
+                    <a class="nav-link" href="">Shop</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
@@ -114,7 +114,107 @@
 
     <!-- footer section -->
 
-    <script src="./js/footer.js"></script>
+    <footer class="footer-section progress-bar-striped bg-secondary" id="footer">
+        <div class="container text-center text-md-left mt-5">
+            <div class="row">
+
+                <div class="col-md-3 mx-auto md-4 ">
+                    <h6 class="text-uppercase font-weight-bold"> Products</h6>
+                    <hr class="bg-dark mb-4 mt-0 d-inline-block mx-auto" style="width : 85px; height : 2px">
+
+                    <ul class="list-unstyled ">
+
+                        <li class="my-2 "><a href="#" class="text-dark">Help Centre</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Contact Us</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Product Help</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Warranty</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Order Status</a></li>
+
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 mx-auto md-4">
+                    <h6 class="text-uppercase font-weight-bold"> services</h6>
+                    <hr class="bg-dark mb-4 mt-0 d-inline-block mx-auto" style="width : 85px; height : 2px">
+
+                    <ul class="list-unstyled">
+
+                        <li class="my-2"><a href="#" class="text-dark">Help Centre</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Contact Us</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Product Help</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Warranty</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Order Status</a></li>
+
+                    </ul>
+                </div>
+
+
+
+                <div class="col-md-3 mx-auto md-4">
+                    <h6 class="text-uppercase font-weight-bold"> support</h6>
+                    <hr class="bg-dark mb-4 mt-0 d-inline-block mx-auto" style="width : 85px; height : 2px">
+
+                    <ul class="list-unstyled">
+
+                        <li class="my-2"><a href="#" class="text-dark">Help Centre</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Contact Us</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Product Help</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Warranty</a></li>
+                        <li class="my-2"><a href="#" class="text-dark">Order Status</a></li>
+
+                    </ul>
+                </div>
+
+
+
+
+                <div class="col-md-3 mx-auto md-4">
+                    <h6 class="text-uppercase font-weight-bold"> Ecom Shop</h6>
+                    <hr class=" text-dark" style="width : 85px; height : 2px">
+
+                    <ul class="footer-social-icon">
+                        <!-- <li class="my-2"><span>follow us</span></li> -->
+                        <div class="fa-4x">
+                            <a href="#"><box-icon type='logo' name='facebook-circle'
+                                    style="font-size: 30px;color: black"> </box-icon></a>
+                            <a href="#"><box-icon type='logo' name='youtube'
+                                    style="font-size: 30px;color: black"></box-icon></a>
+                            <a href="#"><box-icon type='logo' name='instagram'
+                                    style="font-size: 30px;color: black"></box-icon></a>
+                            <a href="#"><box-icon type='logo' name='twitter'
+                                    style="font-size: 30px;color: black"></box-icon></a>
+
+                        </div>
+
+                        <div class="footer-widget mx-auto md-4">
+
+
+                            <form class="subscribe_form ">
+                                <div class="input-group " style="width: 300px;">
+                                    <input type="text" class="form-control" name="email" placeholder="Enter your email">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default bg-danger text-light"
+                                            type="button">subscribe</button>
+                                    </span>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </footer>
 
     <!-- modal login -->
 
@@ -354,12 +454,12 @@
 
 
 
-    
 
 
 
 
-    
+
+
 
 
     <script src="./js/script.js"></script>
